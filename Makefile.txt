@@ -1,0 +1,12 @@
+
+output: letterMain.o letter.o
+        g++ letterMain.o letter.o -o output
+
+letterMain.o: letterMain.cpp
+        g++ -c letterMain.cpp
+
+letter.o: letter.cpp letter.hpp
+        g++ -c letter.cpp
+
+clean:
+        rm *.o output
